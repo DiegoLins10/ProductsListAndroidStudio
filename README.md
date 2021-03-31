@@ -1,4 +1,4 @@
-## Projeto - Lista de produtos - Android Studio
+## Projeto - Lista de Produtos - Android Studio
 ### Centro Paula Souza - Fatec Ferraz - Curso de Análise e Desenvolvimento de Sistemas
 ### Disciplina – Programação para dispositivos moveis – Prof. Marcos Vasconcelos
 
