@@ -1,4 +1,4 @@
-## Projeto - Treinando logica de programação usando Kotlin
+## Projeto - Lista de produtos - Android Studio
 ### Centro Paula Souza - Fatec Ferraz - Curso de Análise e Desenvolvimento de Sistemas
 ### Disciplina – Programação para dispositivos moveis – Prof. Marcos Vasconcelos
 
