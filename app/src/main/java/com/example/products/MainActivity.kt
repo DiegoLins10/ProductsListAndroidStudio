@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import kotlinx.android.synthetic.*
+import kotlinx.android.synthetic.main.activity_cadastro.*
 import kotlinx.android.synthetic.main.activity_main.*
 import org.w3c.dom.Text
 
@@ -75,7 +76,6 @@ class MainActivity : AppCompatActivity() {
                 //formando em formato moeda
                 val f = NumberFormat.getCurrencyInstance(Locale("pt", "br"))
                 txtTotal.text = "TOTAL: ${f.format(soma)}"
-
             }
         }
     }

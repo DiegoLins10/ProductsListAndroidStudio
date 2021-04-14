@@ -8,6 +8,8 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_cadastro.*
 import org.jetbrains.anko.toast
 import org.jetbrains.anko.db.insert
+import java.text.DecimalFormat
+
 
 //import kotlinx.android.synthetic.main.activity_cadastro.*
 ///import kotlinx.android.synthetic.main.list_view_item.*

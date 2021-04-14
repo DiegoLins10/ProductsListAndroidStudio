@@ -43,12 +43,13 @@
                 android:textStyle="bold"/>
 
         </LinearLayout>
+
         <TextView
+            android:id="@+id/txtItemValor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtItemValor"
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 
