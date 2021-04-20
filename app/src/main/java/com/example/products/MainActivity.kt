@@ -11,25 +11,28 @@ class MainActivity : AppCompatActivity() {
 
         //criando o adaptador
 
-        val produtoAdapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1)
+        val produtoAdapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1)
         val listViewProdutos = findViewById<ListView>(R.id.listViewProdutos)
         val btnInserir = findViewById<Button>(R.id.btnInserir)
         val txtProduto = findViewById<TextView>(R.id.txtProduto)
 
         listViewProdutos.adapter = produtoAdapter
 
-        btnInserir.setOnClickListener{
+        btnInserir.setOnClickListener {
             val produto = txtProduto.text.toString()
-
-            if(produto.isEmpty()){
-                produtoAdapter.add(produto)
+            var numero = produtoAdapter.count + 1;
+            if (produto.isNotEmpty()) {
+                var concatenar = "$numero - $produto"
+                produtoAdapter.add(concatenar)
+                //numero+= 1;
                 txtProduto.text = ""
-            }else{
+            } else {
                 txtProduto.error = "Coloque um produto"
             }
             listViewProdutos.setOnItemClickListener{adapterView: AdapterView<*>, view, position : Int, Id: Long->
                 val item = produtoAdapter.getItem(position)
                 produtoAdapter.remove(item)
+
             }
         }
     }
