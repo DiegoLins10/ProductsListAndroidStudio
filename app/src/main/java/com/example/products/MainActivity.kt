@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
         listViewProdutos.setOnItemClickListener { adapterView: AdapterView<*>, view, position: Int, id ->
             val item = produtosAdapter.getItem(position)
             produtosAdapter.remove(item)
-
         }
     }
     override fun onResume()  {
@@ -52,8 +51,8 @@ class MainActivity : AppCompatActivity() {
         for(item in produtosGlobal){
             soma += item.valor * item.quantidade
         }
-        val f = NumberFormat.getCurrencyInstance(Locale("pt", "b"))
-        txtTotal.text = "Total: R$ ${f.format(soma)}"
+        val f = NumberFormat.getCurrencyInstance(Locale("pt", "br"))
+        txtTotal.text = "Total: ${f.format(soma)}"
     }
 
 }
