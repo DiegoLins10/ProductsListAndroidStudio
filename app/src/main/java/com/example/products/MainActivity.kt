@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
 
         val produtosAdapter = ProdutoAdapter(this)
-        val listViewProdutos = findViewById<ListView>(R.id.listViewProdutos)
+        var listViewProdutos = findViewById<ListView>(R.id.listViewProdutos)
 
 
         listViewProdutos.adapter = produtosAdapter
