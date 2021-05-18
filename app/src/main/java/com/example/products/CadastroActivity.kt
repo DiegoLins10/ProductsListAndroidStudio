@@ -58,8 +58,7 @@ class CadastroActivity : AppCompatActivity() {
 
 
             } else {
-                txtProduto.error =
-                        if (txtProduto.text.isEmpty()) "Preencha o nome do Produto" else null
+                txtProduto.error = if (txtProduto.text.isEmpty()) "Preencha o nome do Produto" else null
                 txtQtde.error = if (txtQtde.text.isEmpty()) "Preencha a quantidade" else null
                 txtValor.error = if (txtValor.text.isEmpty()) "Preecha o valor" else null
             }
@@ -73,7 +72,7 @@ class CadastroActivity : AppCompatActivity() {
 
     fun abrirGaleria() {
         //definindo a ação de conteudo
-        val intent = Intent(Intent.ACTION_GET_CONTENT)
+        var intent = Intent(Intent.ACTION_GET_CONTENT)
 
         //definindo filtro para imagens
         intent.type = "image/*"

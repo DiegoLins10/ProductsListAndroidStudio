@@ -7,7 +7,7 @@ import java.io.ByteArrayOutputStream
 val produtosGlobal = mutableListOf<Produto>()
 
 fun Bitmap.toBYteArray(): ByteArray {
-    val stream = ByteArrayOutputStream()
+    val stream = java.io.ByteArrayOutputStream()
     //comprimindo a imagem
     this.compress(android.graphics.Bitmap.CompressFormat.PNG, 0, stream)
     //transformando em um array de caracteres
