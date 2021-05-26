@@ -7,6 +7,7 @@ import android.widget.*
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_cadastro.*
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.db.delete
 import org.w3c.dom.Text
 
 import    org.jetbrains.anko.startActivity
@@ -35,12 +36,20 @@ class MainActivity : AppCompatActivity() {
             startActivity<CadastroActivity>()
         }
 
-        listViewProdutos.setOnItemClickListener { adapterView: AdapterView<*>, view, position: Int, id ->
+        listViewProdutos.setOnItemLongClickListener { adapterView: AdapterView<*>, view, position: Int, id: Long ->
+
+            //buscando o item clicado
             val item = produtosAdapter.getItem(position)
+            //removendo o item
             produtosAdapter.remove(item)
+
+            deletarProduto(item!!.id)
+            toast("item deletado com sucesso")
+            true
 
         }
     }
+
 
     override fun onResume() {
         super.onResume()
@@ -79,6 +88,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
+fun deletarProduto(idProduto: Int){
+    database.use {
+        delete("Produtos", "id = {id}", "id" to idProduto)
+        }
+    }
 
 }
