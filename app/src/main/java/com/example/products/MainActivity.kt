@@ -18,6 +18,7 @@ import org.jetbrains.anko.db.parseList
 import org.jetbrains.anko.db.rowParser
 import org.jetbrains.anko.db.select
 import org.jetbrains.anko.toast
+import java.text.DecimalFormat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                                          foto: ByteArray? ->
                     //Colunas do banco de dados
                     //Montagem do objeto Produto com as colunas do banco
-                    Produto(id, nome, quantidade, valor, foto?.toBitmap())
+                    Produto(id, nome, quantidade, valor , foto?.toBitmap())
                 }
 
                 //criando a lista de produtos com dados do banco

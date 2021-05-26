@@ -32,7 +32,7 @@
         android:id="@+id/listViewProdutos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_500"/>
+        />
 
 
 </LinearLayout>
