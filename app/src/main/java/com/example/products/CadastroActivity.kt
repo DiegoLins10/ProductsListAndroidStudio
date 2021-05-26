@@ -25,7 +25,7 @@ class CadastroActivity : AppCompatActivity() {
             val qtd = txtQtde.text.toString()
             val valor = txtValor.text.toString()
             if (produto.isNotEmpty() && qtd.isNotEmpty() && valor.isNotEmpty()) {
-                val prod = Produto(produto, qtd.toInt(), valor.toDouble())
+                val prod = Produto(produto, qtd.toInt(), valor.toDouble(), imageBitMap)
                 produtosGlobal.add(prod)
                 txtProduto.text.clear()
                 txtQtde.text.clear()
@@ -72,11 +72,11 @@ class CadastroActivity : AppCompatActivity() {
                 //vamos acessar a imagem escolhida através da variável "data"
                 //lendo a URI com a imagem
 
-                //val inputStream = contentResolver.openInputStream(data.getData());
+                val inputStream = contentResolver.openInputStream(data.getData()!!);
 
 
                 //transformando o resultado em bitmap
-                //imageBitMap = BitmapFactory.decodeStream(inputStream)
+                imageBitMap = BitmapFactory.decodeStream(inputStream)
 
                 //exibir a imagem no aplicativo
                 imgFotoProduto.setImageBitmap(imageBitMap)

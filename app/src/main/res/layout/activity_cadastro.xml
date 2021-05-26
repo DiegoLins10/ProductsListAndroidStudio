@@ -17,11 +17,11 @@ tools:context=".MainActivity">
     android:textSize="21sp"
     android:textStyle="bold" />
 
-<ImageView
+<!--<ImageView
     android:layout_width="100dp"
     android:layout_height="100dp"
     android:layout_gravity="center_horizontal"
-    />
+    />-->
 
 
 <ImageView
