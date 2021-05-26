@@ -3,6 +3,7 @@
 ### Disciplina – Programação para dispositivos moveis – Prof. Marcos Vasconcelos
 
 - Diego Fernandes Lins
+- Gustavo Lino
 
 ### Resumo
 Um aplicativo usando android studio e Kotlin que adiciona produtos a uma lista de compras para o usuario.
